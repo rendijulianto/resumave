@@ -9,8 +9,8 @@ export default {
             { name: 'address', label: 'Alamat', placeholder: 'Jl. 123, Kota, Negara' },
             { name: 'linkedin', label: 'LinkedIn', placeholder: 'linkedin.com/in/fitrinurulfadilah' },
             { name: 'blogs', label: 'Blog', placeholder: 'blog.com/fitrinurulfadilah' },
-            { name: 'twitter', label: 'Twitter', placeholder: 'twitter.com/fitrinurulfadilahdoe' },
-            { name: 'portfolio', label: 'Portofolio', placeholder: 'johndoe.com' },
+            { name: 'twitter', label: 'Twitter', placeholder: 'twitter.com/fitrinurulfadilah' },
+            { name: 'portfolio', label: 'Portofolio', placeholder: 'fitrinurulfadilah.com' },
         ],
     },
     ringkasan: {
