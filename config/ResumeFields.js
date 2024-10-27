@@ -11,7 +11,7 @@ export default {
             { name: 'linkedin', label: 'Linked', placeholder: 'linkedin.com/in/johndoe' },
             { name: 'github', label: 'Github', placeholder: 'github.com/johndoe' },
             { name: 'blogs', label: 'Blogs', placeholder: 'github.com/johndoe' },
-            { name: 'twitter', label: 'Twitter', placeholder: 'github.com/johndoe' },
+            { name: 'instagram', label: 'Instagram', placeholder: 'instagram.com/rendy.jul' },
             { name: 'portfolio', label: 'Portfolio', placeholder: 'johndoe.com' },
         ],
     },
@@ -67,10 +67,18 @@ export default {
         multiple: true,
         fields: [
             { name: 'title', label: 'Project Title', placeholder: 'Project Name' },
+            {
+                name: 'descriptionProject',
+                label: 'Now Describe What you did',
+                type: 'textarea',
+                placeholder: 'Briefly describe your project...',
+                span: true,
+            },
             { name: 'url', label: 'Project Url', placeholder: 'https://example.com/project' },
+            { name: 'techStack', label: 'Tech Stack', placeholder: 'React, Node.js, MongoDB' },
             {
                 name: 'description',
-                label: 'Now Describe What you did',
+                label: 'List of Features \ Description',
                 type: 'textarea',
                 placeholder: 'Briefly describe your project...',
                 span: true,

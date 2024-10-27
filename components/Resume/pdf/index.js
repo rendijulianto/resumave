@@ -29,8 +29,8 @@ const Header = ({ data }) => {
             value: data['blogs'],
         },
         {
-            name: 'Twitter',
-            value: data['twitter'],
+            name: 'Instagram',
+            value: data['instagram'],
         },
         {
             name: 'Portfolio',
@@ -55,7 +55,7 @@ const Header = ({ data }) => {
 };
 
 const Education = ({ data }) => (
-    <Section title={'Education'}>
+    <Section title={'Pendidikan'}>
         {data.map(({ degree, institution, start, end, location, gpa }, i) => (
             <View key={i} style={styles?.wrappper}>
                 <View style={styles.title_wrapper}>
@@ -81,18 +81,21 @@ const Education = ({ data }) => (
 );
 
 const Projects = ({ data }) => (
-    <Section title={'Projects'}>
+    <Section title={'Project'}>
         {data.map((project, i) => (
             <View key={i}>
                 <View style={styles.title_wrapper}>
                     <Text style={styles.title}>{project.title}</Text>
-                    {/* <Text style={styles.date}>
-                        ({project.start} - {project.end})
-                    </Text> */}
+                  
+                </View>
+                <View style={styles.subTitle_wrapper}>
+                    <Text>
+                       {project.descriptionProject}
+                    </Text>
                 </View>
 
                 <View style={styles.subTitle_wrapper}>
-                    <Link
+                    <Text>Link: <Link
                         style={{
                             textDecoration: 'none',
                             color: '#666',
@@ -100,7 +103,13 @@ const Projects = ({ data }) => (
                         src={project.url}
                     >
                         {project.url}
-                    </Link>
+                    </Link></Text>
+                   
+                </View>
+                <View style={styles.subTitle_wrapper}>
+                    <Text>
+                        Tech Stack: <Text style={styles.subTitle}>{project.techStack}</Text>
+                    </Text>
                 </View>
 
                 <View style={styles.lists}>
@@ -119,7 +128,7 @@ const Projects = ({ data }) => (
 );
 
 const Experience = ({ data }) => (
-    <Section title={'Experience'}>
+    <Section title={'Pengalaman'}>
         {data.map(({ role, start, end, company, location, description }, i) => (
             <View key={i} style={styles?.wrappper}>
                 <View style={styles.title_wrapper}>
@@ -146,7 +155,7 @@ const Experience = ({ data }) => (
 );
 
 const Skills = ({ data }) => (
-    <Section title={'skills'}>
+    <Section title={'Keahlian'}>
         {data?.split('\n').map((line, i) => (
             <Text key={i} style={{ fontSize: 11 }}>
                 {line}
@@ -156,7 +165,7 @@ const Skills = ({ data }) => (
 );
 
 const Certificaes = ({ data }) => (
-    <Section title={'Certifications'}>
+    <Section title={'Sertifikasi'}>
         {data.map(({ title, issuer, date }, i) => (
             <View key={i} style={styles?.wrappper}>
                 <View style={styles.title_wrapper}>
@@ -175,7 +184,7 @@ const Certificaes = ({ data }) => (
 );
 
 const Languages = ({ data }) => (
-    <Section title={'Languages'}>
+    <Section title={'Bahasa'}>
         <View
             style={{
                 display: 'flex',
@@ -202,7 +211,7 @@ const Resume = ({ data }) => {
                 <Header data={contact} />
 
                 {summary?.summary && (
-                    <Section title={'Summary'}>
+                    <Section title={'Ringkasan'}>
                         <Text style={{ fontSize: 10 }}>{summary?.summary}</Text>
                     </Section>
                 )}

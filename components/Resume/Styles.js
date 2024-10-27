@@ -50,6 +50,10 @@ const styles = StyleSheet.create({
         marginRight: 'auto',
         color: '#555',
     },
+    subTitle: {
+        fontFamily: 'Times-Bold',
+        fontSize: 10,
+    },
     date: {
         fontFamily: 'Times-Italic',
         fontSize: 10,
