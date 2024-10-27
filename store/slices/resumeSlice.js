@@ -1,15 +1,14 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const defaultResume = {
-    contact: {},
-    summary: {},
-    education: [],
-    experience: [],
-    projects: [],
-    skills: {},
-    certificates: [],
-    languages: [],
-
+    kontak: {},
+    ringkasan: {},
+    pendidikan: [],
+    pengalaman: [],
+    proyek: [],
+    keterampilan: {},
+    sertifikat: [],
+    bahasa: [],
     saved: false,
 };
 

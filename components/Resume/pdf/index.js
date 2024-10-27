@@ -7,7 +7,7 @@ import styles from '../Styles';
 import formatDate from '@/utils/formatDate';
 
 const Header = ({ data }) => {
-    const contactLinks = [
+    const kontakLinks = [
         {
             name: data['phone'],
             value: data['phone'],
@@ -42,7 +42,7 @@ const Header = ({ data }) => {
         <Section>
             <Text style={styles.header__name}>{data.name}</Text>
             <View style={styles.header__links}>
-                {contactLinks
+                {kontakLinks
                     .filter(obj => obj.value)
                     .map(({ value, name }) => (
                         <Link key={name} src={value} style={{ color: '#555' }}>
@@ -54,8 +54,8 @@ const Header = ({ data }) => {
     );
 };
 
-const Education = ({ data }) => (
-    <Section title={'Education'}>
+const Pendidikan = ({ data }) => (
+    <Section title={'Pendidikan'}>
         {data.map(({ degree, institution, start, end, location, gpa }, i) => (
             <View key={i} style={styles?.wrappper}>
                 <View style={styles.title_wrapper}>
@@ -80,8 +80,8 @@ const Education = ({ data }) => (
     </Section>
 );
 
-const Projects = ({ data }) => (
-    <Section title={'Projects'}>
+const Proyek = ({ data }) => (
+    <Section title={'Proyek'}>
         {data.map((project, i) => (
             <View key={i}>
                 <View style={styles.title_wrapper}>
@@ -118,8 +118,8 @@ const Projects = ({ data }) => (
     </Section>
 );
 
-const Experience = ({ data }) => (
-    <Section title={'Experience'}>
+const Pengalaman = ({ data }) => (
+    <Section title={'Pengalaman'}>
         {data.map(({ role, start, end, company, location, description }, i) => (
             <View key={i} style={styles?.wrappper}>
                 <View style={styles.title_wrapper}>
@@ -145,8 +145,8 @@ const Experience = ({ data }) => (
     </Section>
 );
 
-const Skills = ({ data }) => (
-    <Section title={'skills'}>
+const Keterampilan = ({ data }) => (
+    <Section title={'Keterampilan'}>
         {data?.split('\n').map((line, i) => (
             <Text key={i} style={{ fontSize: 11 }}>
                 {line}
@@ -155,7 +155,7 @@ const Skills = ({ data }) => (
     </Section>
 );
 
-const Certificaes = ({ data }) => (
+const Sertifikat = ({ data }) => (
     <Section title={'Certifications'}>
         {data.map(({ title, issuer, date }, i) => (
             <View key={i} style={styles?.wrappper}>
@@ -174,8 +174,8 @@ const Certificaes = ({ data }) => (
     </Section>
 );
 
-const Languages = ({ data }) => (
-    <Section title={'Languages'}>
+const Bahasa = ({ data }) => (
+    <Section title={'Bahasa'}>
         <View
             style={{
                 display: 'flex',
@@ -194,26 +194,28 @@ const Languages = ({ data }) => (
 );
 
 const Resume = ({ data }) => {
-    const { contact, education, experience, projects, summary, skills, certificates, languages } = data;
+    const { kontak, pendidikan, pengalaman, proyek, ringkasan, keterampilan, sertifikat, bahasa } = data;
+
+    console.log(`ini data`, data);
 
     return (
         <Document language="en">
             <Page size="A4" style={styles.page}>
-                <Header data={contact} />
+                <Header data={kontak} />
 
-                {summary?.summary && (
-                    <Section title={'Summary'}>
-                        <Text style={{ fontSize: 10 }}>{summary?.summary}</Text>
+                {ringkasan?.ringkasan && (
+                    <Section title={'Ringkasan'}>
+                        <Text style={{ fontSize: 10 }}>{ringkasan?.ringkasan}</Text>
                     </Section>
                 )}
 
-                {education.length > 0 && <Education data={education} />}
-                {experience.length > 0 && <Experience data={experience} />}
-                {projects.length > 0 && <Projects data={projects} />}
+                {pendidikan.length > 0 && <Pendidikan data={pendidikan} />}
+                {pengalaman.length > 0 && <Pengalaman data={pengalaman} />}
+                {proyek.length > 0 && <Proyek data={proyek} />}
 
-                {skills?.skills?.length > 0 && <Skills data={skills.skills} />}
-                {certificates?.length > 0 && <Certificaes data={certificates} />}
-                {languages?.length > 0 && <Languages data={languages} />}
+                {keterampilan?.keterampilan?.length > 0 && <Keterampilan data={keterampilan.keterampilan} />}
+                {sertifikat?.length > 0 && <Sertifikat data={sertifikat} />}
+                {bahasa?.length > 0 && <Bahasa data={bahasa} />}
             </Page>
         </Document>
     );

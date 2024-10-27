@@ -61,7 +61,7 @@ const Preview = () => {
                     </button>
                     <a
                         href={instance.url}
-                        download={`${resumeData.contact?.name || 'resume'}.pdf`}
+                        download={`${resumeData.kontak?.name || 'resume'}.pdf`}
                         className="btn text-sm"
                     >
                         <span>Download</span>

@@ -29,7 +29,7 @@ const Editor = ({ tab }) => {
                 {!multiple && <SingleEditor tab={tab} />}
 
                 <button type="submit" className="btn-filled ml-auto mt-6 w-full gap-2 px-6 text-center md:w-auto">
-                    <span>Save</span> <FaSave />
+                    <span>Simpan</span> <FaSave />
                 </button>
             </form>
         </>

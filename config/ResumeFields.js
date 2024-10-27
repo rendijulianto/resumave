@@ -1,60 +1,57 @@
 export default {
-    contact: {
-        name: 'Contact',
-        name: 'Contact',
+    kontak: {
+        name: 'Kontak',
         fields: [
-            { name: 'name', label: 'Full Name', placeholder: 'John Doe', required: true },
-            { name: 'title', label: 'Your Job Title', placeholder: 'Software Developer' },
-            { name: 'email', label: 'Email', type: 'email', placeholder: 'john.doe@example.com' },
-            { name: 'phone', label: 'Phone', type: 'tel', placeholder: '+1234567890' },
-            { name: 'address', label: 'Address', placeholder: '123 Street, City, Country' },
-            { name: 'linkedin', label: 'Linked', placeholder: 'linkedin.com/in/johndoe' },
-            { name: 'github', label: 'Github', placeholder: 'github.com/johndoe' },
-            { name: 'blogs', label: 'Blogs', placeholder: 'github.com/johndoe' },
-            { name: 'twitter', label: 'Twitter', placeholder: 'github.com/johndoe' },
-            { name: 'portfolio', label: 'Portfolio', placeholder: 'johndoe.com' },
+            { name: 'name', label: 'Nama Lengkap', placeholder: 'Fitri Nurul Fadilah', required: true },
+            { name: 'title', label: 'Posisi Pekerjaan Anda', placeholder: 'Akuntan' },
+            { name: 'email', label: 'Email', type: 'email', placeholder: 'fitrinurul@gmail.com', required: true },
+            { name: 'phone', label: 'Telepon', type: 'tel', placeholder: '+62 812 3456 7890' },
+            { name: 'address', label: 'Alamat', placeholder: 'Jl. 123, Kota, Negara' },
+            { name: 'linkedin', label: 'LinkedIn', placeholder: 'linkedin.com/in/fitrinurulfadilah' },
+            { name: 'blogs', label: 'Blog', placeholder: 'blog.com/fitrinurulfadilah' },
+            { name: 'twitter', label: 'Twitter', placeholder: 'twitter.com/fitrinurulfadilahdoe' },
+            { name: 'portfolio', label: 'Portofolio', placeholder: 'johndoe.com' },
         ],
     },
-    summary: {
-        name: 'Summary',
+    ringkasan: {
+        name: 'Ringkasan',
         fields: [
             {
-                name: 'summary',
-                label: 'Summary',
+                name: 'ringkasan',
+                label: 'Ringkasan',
                 type: 'textarea',
-                placeholder: 'Brief summary of your skills and experience...',
+                placeholder: 'Ringkasan singkat tentang keterampilan dan pengalaman Anda...',
                 span: true,
                 rows: 5,
             },
         ],
     },
-    education: {
-        name: 'Education',
+    pendidikan: {
+        name: 'Pendidikan',
         multiple: true,
         fields: [
-            { name: 'degree', label: 'Study Program', placeholder: 'Bachelor of Computer Science' },
-            { name: 'institution', label: 'Institution', placeholder: 'University Name' },
-            { name: 'start', label: 'Start Date', type: 'month', placeholder: 'MM/YYYY' },
-            { name: 'end', label: 'End Date', type: 'month', placeholder: 'MM/YYYY' },
-            { name: 'location', label: 'Location', placeholder: 'City, Country' },
-            { name: 'gpa', label: 'GPA', placeholder: '3.8/4.0' },
+            { name: 'degree', label: 'Program Studi', placeholder: 'Sarjana Ilmu Komputer' },
+            { name: 'institution', label: 'Institusi', placeholder: 'Nama Universitas' },
+            { name: 'start', label: 'Tanggal Mulai', type: 'month', placeholder: 'MM/YYYY' },
+            { name: 'end', label: 'Tanggal Selesai', type: 'month', placeholder: 'MM/YYYY' },
+            { name: 'location', label: 'Lokasi', placeholder: 'Kota, Negara' },
+            { name: 'gpa', label: 'IPK', placeholder: '3.8/4.0' },
         ],
     },
-
-    experience: {
-        name: 'Experience',
+    pengalaman: {
+        name: 'Pengalaman',
         multiple: true,
         fields: [
-            { name: 'role', label: 'Title / Position', span: true, placeholder: 'Software Engineer' },
-            { name: 'company', label: 'Workplace / Company', placeholder: 'Company Name' },
-            { name: 'location', label: 'Location', placeholder: 'City, Country' },
-            { name: 'start', label: 'Start Date', type: 'month', placeholder: 'MM/DD/YYYY' },
-            { name: 'end', label: 'End Date', type: 'month', placeholder: 'MM/DD/YYYY' },
+            { name: 'role', label: 'Posisi / Jabatan', span: true, placeholder: 'Insinyur Perangkat Lunak' },
+            { name: 'company', label: 'Tempat Kerja / Perusahaan', placeholder: 'Nama Perusahaan' },
+            { name: 'location', label: 'Lokasi', placeholder: 'Kota, Negara' },
+            { name: 'start', label: 'Tanggal Mulai', type: 'month', placeholder: 'MM/DD/YYYY' },
+            { name: 'end', label: 'Tanggal Selesai', type: 'month', placeholder: 'MM/DD/YYYY' },
             {
                 name: 'description',
-                label: 'Responsibility',
+                label: 'Tanggung Jawab',
                 type: 'textarea',
-                placeholder: 'Brief description of your responsibilities...',
+                placeholder: 'Deskripsi singkat tentang tanggung jawab Anda...',
                 span: true,
                 rows: 4,
                 multipoints: true,
@@ -62,77 +59,72 @@ export default {
         ],
     },
 
-    projects: {
-        name: 'Projects',
+    proyek: {
+        name: 'Proyek',
         multiple: true,
         fields: [
-            { name: 'title', label: 'Project Title', placeholder: 'Project Name' },
-            { name: 'url', label: 'Project Url', placeholder: 'https://example.com/project' },
+            { name: 'title', label: 'Judul Proyek', placeholder: 'Nama Proyek' },
+            { name: 'url', label: 'URL Proyek', placeholder: 'https://contoh.com/proyek' },
             {
                 name: 'description',
-                label: 'Now Describe What you did',
+                label: 'Deskripsikan Apa yang Anda Lakukan',
                 type: 'textarea',
-                placeholder: 'Briefly describe your project...',
+                placeholder: 'Deskripsikan proyek Anda secara singkat...',
                 span: true,
                 multipoints: true,
             },
         ],
     },
 
-    skills: {
-        name: 'Skills',
+    keterampilan: {
+        name: 'Keterampilan',
         fields: [
             {
-                name: 'skills',
-                label: 'Skills',
+                name: 'keterampilan',
+                label: 'Keterampilan',
                 type: 'textarea',
-                placeholder: 'List your skills separated by commas...',
+                placeholder: 'Daftar keterampilan Anda, pisahkan dengan koma...',
                 span: true,
                 rows: 3,
             },
         ],
     },
 
-    certificates: {
-        name: 'Certificates',
+    sertifikat: {
+        name: 'Sertifikat',
         multiple: true,
         fields: [
-            { name: 'title', label: 'Certificate Title', placeholder: 'Certificate Name', span: true },
-            { name: 'issuer', label: 'Issuing Organization', placeholder: 'Organization Name' },
-            { name: 'date', label: 'Issuance Date', type: 'month', placeholder: 'MM/DD/YYYY' },
+            { name: 'title', label: 'Judul Sertifikat', placeholder: 'Nama Sertifikat', span: true },
+            { name: 'issuer', label: 'Organisasi Penerbit', placeholder: 'Nama Organisasi' },
+            { name: 'date', label: 'Tanggal Penerbitan', type: 'month', placeholder: 'MM/DD/YYYY' },
         ],
     },
 
-    languages: {
-        name: 'Languages',
+    bahasa: {
+        name: 'Bahasa',
         multiple: true,
         fields: [
-            { name: 'language', label: 'Language', placeholder: 'Language Name' },
+            { name: 'language', label: 'Bahasa', placeholder: 'Nama Bahasa' },
             {
                 name: 'proficiency',
-                label: 'Proficiency',
-                placeholder: 'e.g., Fluent, Intermediate, Beginner',
+                label: 'Kemampuan',
+                placeholder: 'misalnya, Lancar, Menengah, Pemula',
                 type: 'select',
                 options: [
                     {
-                        
-                        value: 'Elementary Proficiency',
+                        value: 'Kemampuan Dasar',
                     },
                     {
-                        
-                        value: 'Limited Working Proficiency',
+                        value: 'Kemampuan Bekerja Terbatas',
                     },
                     {
-                        
-                        value: 'Professional Working Proficiency',
+                        value: 'Kemampuan Kerja Profesional',
                     },
                     {
-                        
-                        value: 'Full Professional Proficiency',
+                        value: 'Kemampuan Profesional Penuh',
                     },
                     {
-                        
-                        value: 'Native or Bilingual Proficiency',
+                        value: 'Kemampuan Bilingual atau Bahasa Ibu',
                     },
                 ],
             },
